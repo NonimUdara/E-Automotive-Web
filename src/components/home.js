@@ -35,22 +35,22 @@ export default class GymHome extends Component {
             </div>
             <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Parts Management</p>
-              <a className="btn btn-outline-primary w-25"  role="button">Parts</a>
+              <a className="btn btn-outline-primary w-25" href=" "  role="button">Parts</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
 
             <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Garage Locations</h3>
             <div className="col-4" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>View Garage Location Details Send By Users</p>
-              <a className="btn btn-outline-success w-25" role="button">View</a>
+              <a className="btn btn-outline-success w-25" href=" " role="button">View</a>
             </div>
             <div className="col-4" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Add Location</p>
-              <a className="btn btn-outline-success w-25"  role="button">Add</a>
+              <a className="btn btn-outline-success w-25" href=" "  role="button">Add</a>
             </div>
             <div className="col-4" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Manage Location</p>
-              <a className="btn btn-outline-success w-25" role="button">Manage</a>
+              <a className="btn btn-outline-success w-25" href=" " role="button">Manage</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
 
@@ -60,7 +60,7 @@ export default class GymHome extends Component {
             </div>
             <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>View Contact Us Messages</p>
-              <a className="btn btn-outline-primary w-25" role="button">Messages</a>
+              <a className="btn btn-outline-primary w-25" href=" " role="button">Messages</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px', }}></hr>
 
