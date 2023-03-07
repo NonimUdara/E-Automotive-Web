@@ -14,10 +14,10 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "/api/auth";
+			const url = "/api/users";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			window.location = "/adminpanel";
+			window.location = "/home";
 		} catch (error) {
 			if (
 				error.response &&
@@ -51,6 +51,8 @@ const Login = () => {
 					</div>
 				</div>
 			</nav>
+
+			
 
 			<div className={styles.login_container} style={{ marginBottom: '-30px' }}>
 				<div className={styles.login_form_container}>

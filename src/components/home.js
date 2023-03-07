@@ -25,8 +25,14 @@ export default class GymHome extends Component {
           </div>
         </nav>
 
-        
-        
+        <div>
+            <button>
+              <a href="/">
+                Logout
+              </a>             
+            </button>
+        </div>
+
 
         <MDBFooter style={{ backgroundColor: '#C4C4C4', marginTop: "60px" }} className="font-small pt-4 mt-4">
           <MDBContainer fluid className="text-center text-md-left">
