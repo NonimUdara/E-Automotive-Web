@@ -102,7 +102,6 @@ class PostDetails extends Component {
     )
   }
 
-
 }
 
 export default (props) => (
