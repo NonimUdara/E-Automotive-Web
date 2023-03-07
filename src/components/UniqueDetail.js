@@ -1,33 +1,33 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact"
+import React, { Component } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
+function withParams(Component) {
+  return (props) => <Component {...props} params={useParams()} />;
+}
 class PostDetails extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      post: {}
+      post: {},
     };
   }
 
   componentDidMount() {
-
     const { id } = this.props.params;
 
     axios.get("/post/" + id).then((res) => {
       if (res.data.success) {
         this.setState({
-          post: res.data.post
+          post: res.data.post,
         });
 
         console.log(this.state.post);
       }
     });
   }
-
-
 
   render() {
 
@@ -38,7 +38,10 @@ class PostDetails extends Component {
 
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4' }}>
           <div className="container">
-            <button style={{ margin: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+              style={{ margin: "10px" }}
+              className="navbar-toggler"
+            >
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
@@ -80,15 +83,9 @@ class PostDetails extends Component {
             </MDBContainer>
           </div>
         </MDBFooter>
-
       </div>
-    )
+    );
   }
-
 }
-export default (props) => (
-  <PostDetails
-    {...props}
-    params={useParams()}
-  />
-);
+
+export default withParams(PostDetails);
