@@ -27,7 +27,7 @@ export default class GymHome extends Component {
 
         <div>
             <button>
-              <a href="/">
+              <a href="/memberdetails">
                 Logout
               </a>             
             </button>
