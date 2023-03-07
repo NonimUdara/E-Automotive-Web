@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "./styles.module.css";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import {  MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import logo from './AutomotiveBackground.jpg'
 
 const Login = () => {
@@ -47,9 +47,8 @@ const Login = () => {
 				</div>
 			</nav>
 
-
 				<div class="row">
-					<img src={logo} style={{ height: '800px', width: '1350px'}}>
+					<img src={logo} style={{ height: '800px', width: '1350px'}} alt='background'>
 					</img>
 				</div>
 
