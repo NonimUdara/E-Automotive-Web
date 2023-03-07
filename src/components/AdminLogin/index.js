@@ -48,7 +48,7 @@ const Login = () => {
 			</nav>
 
 				<div class="row">
-					<img src={logo} style={{ height: '800px', width: '1350px'}} alt='background'>
+					<img src={logo} style={{ height: '750px', width: '1350px'}} alt='background'>
 					</img>
 				</div>
           <div class="row">

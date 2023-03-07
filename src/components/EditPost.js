@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 class EditPost extends Component {
 
@@ -73,20 +73,19 @@ class EditPost extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4', marginBottom: "10px" }}>
-          <div className="container-fluid">
+
+        <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4' }}>
+          <div className="container">
             <button style={{ margin: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav">
                 <li className="nav-item">
-                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="/"> </a>
-                </li><li className="nav-item">
-                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="/adminpanel">Admin Panel</a>
+                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'bold', fontSize: 20 }} href="/">E-Automotives</a>
                 </li>
-                <li className="nav-item">
-                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="/">Logout</a>
+                <li className="nav-item" style={{}}>
+                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20, textAlign: 'right' }} href="/">Logout</a>
                 </li>
               </ul>
             </div>
@@ -94,8 +93,8 @@ class EditPost extends Component {
         </nav>
 
         <div className="col-md-8 mt-4 mx-auto">
-          <center><h3>Update User</h3></center>
-          <form className="needs-validation" noValidate>
+          <center><h3 style={{marginBottom: '30px'}}>Update User</h3></center>
+          <form className="needs-validation" noValidate style={{border:'1px solid black', borderRadius: '5px', padding: '20px'}}>
 
             <div className="form-group" style={{ marginBottom: '15px' }}>
               <label style={{ marginBottom: '5px' }}>Name</label>
@@ -127,35 +126,38 @@ class EditPost extends Component {
                 onChange={this.handleInputChange} />
             </div>
 
-            <button className="btn btn-warning w-100" type="submit" style={{ marginTop: '15px' }} onClick={this.onSubmit}>
-              <i className="far fa-check-square"></i>
-              &nbsp; Update
-            </button>
+            <center>
+              <button className="btn btn-outline-primary w-25" type="submit" style={{ marginTop: '15px', textAlign: 'center', alignItems: 'center' }} onClick={this.onSubmit}>
+                <i className="far fa-check-square"></i>
+                &nbsp; Update
+              </button>
+            </center>
 
           </form>
         </div>
 
-        <MDBFooter style={{ backgroundColor: '#C4C4C4',marginTop: "60px" }} className="font-small pt-4 mt-4">
+        <MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
           <MDBContainer fluid className="text-center text-md-left">
             <MDBRow>
-              <MDBCol md="8">
-              </MDBCol>
-              <MDBCol md="4">
-                <p style={{ fontWeight: 'bold' }}>www.A+Fitness.lk</p>
-              </MDBCol>
+              <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '19px' }}>Vehicle Automotive spare parts sales platform</p>
+              <hr style={{ color: '#CFCFCF', alignItems: 'center', textAlign: 'center' }}></hr>
             </MDBRow>
           </MDBContainer>
           <div className="footer-copyright text-center py-3">
             <MDBContainer fluid>
-              <p style={{ fontWeight: 'bold' }}>Copyright © 2022 A+Fitness| Designed by A+Fitness</p>
-              <p style={{ fontWeight: 'bold' }}>©All rights reserved</p>
+              <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>Nonim Creations © 2023</p>
+              <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>All Right Reserved</p>
             </MDBContainer>
           </div>
         </MDBFooter>
+
       </div>
     )
   }
 }
+
+// export default EditPost;
+
 export default (props) => (
   <EditPost
     {...props}
