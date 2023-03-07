@@ -41,7 +41,7 @@
 .input {
 	outline: none;
 	border: none;
-	width: 370px;
+	width: 670px;
 	padding: 15px;
 	border-radius: 10px;
 	background-color: #edf5f3;
@@ -84,15 +84,16 @@
 	outline: none;
 	padding: 12px 0;
 	background-color: white;
-	border-radius: 20px;
-	width: 180px;
+	border-radius: 5px;
+	width: 280px;
 	font-weight: bold;
 	font-size: 14px;
 	cursor: pointer;
 }
 
 .green_btn {
-	background-color: #3bb19b;
+	background-color: #DD2727;
 	color: white;
 	margin: 10px;
+	margin-bottom: -80px;
 }

@@ -51,13 +51,13 @@ const Login = () => {
 					<img src={logo} style={{ height: '800px', width: '1350px'}} alt='background'>
 					</img>
 				</div>
-
+          <div class="row">
 			<div className={styles.login_container} style={{ marginBottom: '-30px' }}>
 				<div className={styles.login_form_container}>
 					<div className={styles.left}>
 						<form className={styles.form_container} onSubmit={handleSubmit}>
-							<h3 style={{ marginBottom: '30px', marginTop: '-80px' }}>Admin Login</h3>
-							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '280px' }}>Enter Email</label>
+							<h3 style={{ marginBottom: '30px', marginTop: '-100px' }}>Admin Login</h3>
+							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '580px', fontWeight:'bold' }}>Enter Email</label>
 							<input
 								type="email"
 								placeholder="Email"
@@ -67,7 +67,7 @@ const Login = () => {
 								required
 								className={styles.input}
 							/>
-							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '255px' }}>Enter Password</label>
+							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '555px', fontWeight:'bold', marginTop:'20px' }}>Enter Password</label>
 							<input
 								type="password"
 								placeholder="Password"
@@ -84,6 +84,7 @@ const Login = () => {
 						</form>
 					</div>
 				</div>
+			</div>
 			</div>
 
 			<MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
