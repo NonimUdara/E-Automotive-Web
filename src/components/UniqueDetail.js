@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
 function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;

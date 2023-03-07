@@ -3,6 +3,10 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
+function withParams(Component) {
+  return (props) => <Component {...props} params={useParams()} />;
+}
+
 class EditPost extends Component {
 
   constructor(props) {
@@ -158,9 +162,4 @@ class EditPost extends Component {
 
 // export default EditPost;
 
-export default (props) => (
-  <EditPost
-    {...props}
-    params={useParams()}
-  />
-);
+export default withParams(EditPost)
