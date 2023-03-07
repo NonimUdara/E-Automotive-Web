@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import styles from "./styles.module.css";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import logo from './AutomotiveBackground.jpg'
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
@@ -31,34 +32,33 @@ const Login = () => {
 
 	return (
 		<div>
-
 			<nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4' }}>
-				<div className="container-fluid">
+				<div className="container">
 					<button style={{ margin: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>
 					</button>
 					<div className="collapse navbar-collapse" id="navbarNav">
 						<ul className="navbar-nav">
 							<li className="nav-item">
-								<a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="/">Home</a>
-							</li><li className="nav-item">
-								<a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="/adminlogin">Admin Login</a>
-							</li>
-							<li className="nav-item">
-								<a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20 }} href="trainerlogin">Trainer Login</a>
+								<a className="navbar-brand" aria-current="page" style={{ fontWeight: 'bold', fontSize: 20 }} href="/">E-Automotives</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 
-			
+
+				<div class="row">
+					<img src={logo} style={{ height: '800px', width: '1350px'}}>
+					</img>
+				</div>
 
 			<div className={styles.login_container} style={{ marginBottom: '-30px' }}>
 				<div className={styles.login_form_container}>
 					<div className={styles.left}>
 						<form className={styles.form_container} onSubmit={handleSubmit}>
 							<h3 style={{ marginBottom: '30px', marginTop: '-80px' }}>Admin Login</h3>
+							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '280px' }}>Enter Email</label>
 							<input
 								type="email"
 								placeholder="Email"
@@ -68,6 +68,7 @@ const Login = () => {
 								required
 								className={styles.input}
 							/>
+							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '255px' }}>Enter Password</label>
 							<input
 								type="password"
 								placeholder="Password"
@@ -86,20 +87,17 @@ const Login = () => {
 				</div>
 			</div>
 
-			<MDBFooter style={{ backgroundColor: '#C4C4C4' }} className="font-small pt-4 mt-4">
+			<MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
 				<MDBContainer fluid className="text-center text-md-left">
 					<MDBRow>
-						<MDBCol md="8">
-						</MDBCol>
-						<MDBCol md="4">
-							<p style={{ fontWeight: 'bold' }}>www.A+Fitness.lk</p>
-						</MDBCol>
+						<p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '19px' }}>Vehicle Automotive spare parts sales platform</p>
+						<hr style={{ color: '#CFCFCF', alignItems: 'center', textAlign: 'center' }}></hr>
 					</MDBRow>
 				</MDBContainer>
 				<div className="footer-copyright text-center py-3">
 					<MDBContainer fluid>
-						<p style={{ fontWeight: 'bold' }}>Copyright © 2022 A+Fitness| Designed by A+Fitness</p>
-						<p style={{ fontWeight: 'bold' }}>©All rights reserved</p>
+						<p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>Nonim Creations © 2023</p>
+						<p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>All Right Reserved</p>
 					</MDBContainer>
 				</div>
 			</MDBFooter>
