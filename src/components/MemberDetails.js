@@ -104,7 +104,7 @@ export default class Home extends Component {
         <table class="table" style={{ marginBottom: "60px" }}>
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col"> </th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
