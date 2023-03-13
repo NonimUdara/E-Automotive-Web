@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 export default class GymHome extends Component {
   render() {
     return (
@@ -35,7 +38,7 @@ export default class GymHome extends Component {
             </div>
             <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Parts Management</p>
-              <a className="btn btn-outline-primary w-25" href=" "  role="button">Parts</a>
+              <a className="btn btn-outline-primary w-25" href=" " role="button">Parts</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
 
@@ -46,7 +49,7 @@ export default class GymHome extends Component {
             </div>
             <div className="col-4" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Add Location</p>
-              <a className="btn btn-outline-success w-25" href=" "  role="button">Add</a>
+              <a className="btn btn-outline-success w-25" href=" " role="button">Add</a>
             </div>
             <div className="col-4" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Manage Location</p>
@@ -70,6 +73,7 @@ export default class GymHome extends Component {
 
           </div>
         </div>
+
         <MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
           <MDBContainer fluid className="text-center text-md-left">
             <MDBRow>
@@ -78,13 +82,18 @@ export default class GymHome extends Component {
             </MDBRow>
           </MDBContainer>
           <div className="footer-copyright text-center py-3">
-            <MDBContainer fluid>             
+            <h1 style={{ marginBottom: "20px", textAlign: "center", alignItems: "center" }}>
+              <a href=" " role="button" style={{ padding: "10px", color: "#4267B2" }}><FontAwesomeIcon icon={faFacebook} /></a>
+              <a href=" " role="button" style={{ padding: "10px", color: "#1DA1F2" }}><FontAwesomeIcon icon={faTwitter} /></a>
+              <a href=" " role="button" style={{ padding: "10px", color: "#833AB4" }}><FontAwesomeIcon icon={faInstagram} /></a>
+            </h1>
+            <MDBContainer fluid>
               <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>Nonim Creations © 2023</p>
               <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>All Right Reserved</p>
             </MDBContainer>
           </div>
         </MDBFooter>
-        
+
       </div>
     )
   }
