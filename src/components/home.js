@@ -70,7 +70,6 @@ export default class GymHome extends Component {
 
           </div>
         </div>
-
         <MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
           <MDBContainer fluid className="text-center text-md-left">
             <MDBRow>
@@ -79,13 +78,13 @@ export default class GymHome extends Component {
             </MDBRow>
           </MDBContainer>
           <div className="footer-copyright text-center py-3">
-            <MDBContainer fluid>
+            <MDBContainer fluid>             
               <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>Nonim Creations © 2023</p>
               <p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>All Right Reserved</p>
             </MDBContainer>
           </div>
         </MDBFooter>
-
+        
       </div>
     )
   }

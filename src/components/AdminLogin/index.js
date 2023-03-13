@@ -1,8 +1,11 @@
 import { useState } from "react";
 import axios from "axios";
 import styles from "./styles.module.css";
-import {  MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import logo from './AutomotiveBackground.jpg'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
@@ -47,44 +50,44 @@ const Login = () => {
 				</div>
 			</nav>
 
-				<div class="row">
-					<img src={logo} style={{ height: '750px', width: '1350px'}} alt='background'>
-					</img>
-				</div>
-          <div class="row">
-			<div className={styles.login_container} style={{ marginBottom: '-30px' }}>
-				<div className={styles.login_form_container}>
-					<div className={styles.left}>
-						<form className={styles.form_container} onSubmit={handleSubmit}>
-							<h3 style={{ marginBottom: '30px', marginTop: '-100px' }}>Admin Login</h3>
-							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '580px', fontWeight:'bold' }}>Enter Email</label>
-							<input
-								type="email"
-								placeholder="Email"
-								name="email"
-								onChange={handleChange}
-								value={data.email}
-								required
-								className={styles.input}
-							/>
-							<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '555px', fontWeight:'bold', marginTop:'20px' }}>Enter Password</label>
-							<input
-								type="password"
-								placeholder="Password"
-								name="password"
-								onChange={handleChange}
-								value={data.password}
-								required
-								className={styles.input}
-							/>
-							{error && <div className={styles.error_msg}>{error}</div>}
-							<button type="submit" className={styles.green_btn} style={{ marginTop: '40px' }}>
-								Login
-							</button>
-						</form>
+			<div class="row">
+				<img src={logo} style={{ height: '750px', width: '1350px' }} alt='background'>
+				</img>
+			</div>
+			<div class="row">
+				<div className={styles.login_container} style={{ marginBottom: '-30px' }}>
+					<div className={styles.login_form_container}>
+						<div className={styles.left}>
+							<form className={styles.form_container} onSubmit={handleSubmit}>
+								<h3 style={{ marginBottom: '30px', marginTop: '-100px' }}>Admin Login</h3>
+								<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '580px', fontWeight: 'bold' }}>Enter Email</label>
+								<input
+									type="email"
+									placeholder="Email"
+									name="email"
+									onChange={handleChange}
+									value={data.email}
+									required
+									className={styles.input}
+								/>
+								<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '555px', fontWeight: 'bold', marginTop: '20px' }}>Enter Password</label>
+								<input
+									type="password"
+									placeholder="Password"
+									name="password"
+									onChange={handleChange}
+									value={data.password}
+									required
+									className={styles.input}
+								/>
+								{error && <div className={styles.error_msg}>{error}</div>}
+								<button type="submit" className={styles.green_btn} style={{ marginTop: '40px' }}>
+									Login
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
-			</div>
 			</div>
 
 			<MDBFooter style={{ backgroundColor: '#3C3C3C' }} className="font-small pt-4 mt-4">
@@ -95,7 +98,12 @@ const Login = () => {
 					</MDBRow>
 				</MDBContainer>
 				<div className="footer-copyright text-center py-3">
-					<MDBContainer fluid>
+				<h1 style={{marginBottom: "20px", textAlign: "center", alignItems: "center"}}>
+				    <a href=" " role="button" style={{padding: "10px", color: "#4267B2"}}><FontAwesomeIcon icon={faFacebook}/></a>
+					<a href=" " role="button" style={{padding: "10px", color: "#1DA1F2"}}><FontAwesomeIcon icon={faTwitter}/></a>
+					<a href=" " role="button" style={{padding: "10px", color: "#833AB4"}}><FontAwesomeIcon icon={faInstagram}/></a>
+				</h1>
+					<MDBContainer fluid>													
 						<p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>Nonim Creations © 2023</p>
 						<p style={{ fontWeight: 'regular', color: '#CFCFCF', fontSize: '15px' }}>All Right Reserved</p>
 					</MDBContainer>
