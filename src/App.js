@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AdminLogin from "./components/AdminLogin";
-import Home from './components/home';
+import Home from './components/Home';
 import EditPost from './components/EditPost';
 import MemberDetails from './components/MemberDetails';
 import UniqueDetail from './components/UniqueDetail';
