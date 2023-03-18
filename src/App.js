@@ -13,7 +13,7 @@ export default class App extends Component {
         <div className="container">
           <Routes>
             <Route path="/" element={<AdminLogin />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/home" element={<Home/>}/>
             <Route path="/memberdetails" element={<MemberDetails />} />
             <Route path="/edit/:id" element={<EditPost />} />
             <Route path="/post/:id" element={<UniqueDetail />} />
