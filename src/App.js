@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from "./components/Navbar";
 import AdminLogin from "./components/AdminLogin";
-import Home from './components/Home';
+import Home from './components/home';
 import EditPost from './components/EditPost';
 import MemberDetails from './components/MemberDetails';
 import UniqueDetail from './components/UniqueDetail';
@@ -11,6 +12,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
+          <Navbar></Navbar>
           <Routes>
             <Route path="/" element={<AdminLogin />} />
             <Route path="/home" element={<Home/>}/>
