@@ -12,8 +12,7 @@ export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
-          <Navbar></Navbar>
+        <div className="container">         
           <Routes>
             <Route path="/" element={<AdminLogin />} />
             <Route path="/home" element={<Home/>}/>
@@ -22,6 +21,7 @@ export default class App extends Component {
             <Route path="/edit/:id" element={<EditPost />} />
             <Route path="/post/:id" element={<UniqueDetail />} />
           </Routes>
+          <Navbar />
         </div>
       </BrowserRouter>
     )
