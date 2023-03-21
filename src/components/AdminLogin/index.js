@@ -5,7 +5,7 @@ import { MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 import logo from './AutomotiveBackground.jpg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faTwitter, faInstagram,  } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faTwitter, faInstagram, } from '@fortawesome/free-brands-svg-icons';
 import { faUserShield } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
@@ -35,22 +35,7 @@ const Login = () => {
 	};
 
 	return (
-		<div>
-			<nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4' }}>
-				<div className="container">
-					<button style={{ margin: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span className="navbar-toggler-icon"></span>
-					</button>
-					<div className="collapse navbar-collapse" id="navbarNav">
-						<ul className="navbar-nav">
-							<li className="nav-item">
-								<a className="navbar-brand" aria-current="page" style={{ fontWeight: 'bold', fontSize: 20 }} href="/">E-Automotives</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-
+		<div className="container">
 			<div class="row">
 				<img src={logo} style={{ height: '750px', width: '1350px' }} alt='background'>
 				</img>
@@ -62,7 +47,7 @@ const Login = () => {
 							<form className={styles.form_container} onSubmit={handleSubmit}>
 								<h3>Admin Login</h3>
 								<h1 style={{ marginBottom: "20px", textAlign: "center", alignItems: "center" }}>
-									<a href=" " role="button" style={{ padding: "10px", color: "black" }}><FontAwesomeIcon style={{height: '70px'}} icon={faUserShield} /></a>
+									<a href=" " role="button" style={{ padding: "10px", color: "black" }}><FontAwesomeIcon style={{ height: '70px' }} icon={faUserShield} /></a>
 								</h1>
 								<label style={{ alignItems: 'left', textAlign: 'left', marginRight: '580px', fontWeight: 'bold' }}>Enter Email</label>
 								<input

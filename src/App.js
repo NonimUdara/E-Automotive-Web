@@ -7,12 +7,14 @@ import EditPost from './components/EditPost';
 import MemberDetails from './components/MemberDetails';
 import UniqueDetail from './components/UniqueDetail';
 import AdminDashboard from './components/AdminDashboard';
+import Footer from './components/Footer';
 
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">         
+        <div className="container">
+          <Navbar/>   
           <Routes>
             <Route path="/" element={<AdminLogin />} />
             <Route path="/home" element={<Home/>}/>
@@ -21,7 +23,7 @@ export default class App extends Component {
             <Route path="/edit/:id" element={<EditPost />} />
             <Route path="/post/:id" element={<UniqueDetail />} />
           </Routes>
-          <Navbar />
+          <Footer/>         
         </div>
       </BrowserRouter>
     )
