@@ -65,30 +65,14 @@ export default class Home extends Component {
     return (
       <div className="container">
 
-        <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: '#C4C4C4' }}>
-          <div className="container">
-            <button style={{ margin: '10px' }} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div className="collapse navbar-collapse" id="navbarNav">
-              <ul className="navbar-nav">
-                <li className="nav-item">
-                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'bold', fontSize: 20 }} href="/">E-Automotives</a>
-                </li>
-                <li className="nav-item" style={{}}>
-                  <a className="navbar-brand" aria-current="page" style={{ fontWeight: 'small', fontSize: 20, textAlign: 'right' }} href="/">Logout</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
             <h4>
               User Details
             </h4>
-          </center></div>
+          </center>
+        </div>
+
         <div className="row">
           <div className="col-lg-3 mt-2 mb-2">
             <input
@@ -100,6 +84,7 @@ export default class Home extends Component {
             </input>
           </div>
         </div>
+
         <table class="table" style={{ marginBottom: "60px" }}>
           <thead>
             <tr>
@@ -136,7 +121,6 @@ export default class Home extends Component {
         </table>
 
       </div>
-
 
     )
   }
