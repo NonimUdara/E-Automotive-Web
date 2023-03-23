@@ -6,7 +6,7 @@ function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
 }
 
-class EditPost extends Component {
+class EditUser extends Component {
 
   constructor(props) {
     super(props);
@@ -128,4 +128,4 @@ class EditPost extends Component {
 
 // export default EditPost;
 
-export default withParams(EditPost)
+export default withParams(EditUser)
