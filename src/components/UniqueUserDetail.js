@@ -6,7 +6,7 @@ function withParams(Component) {
   return (props) => <Component {...props} params={useParams()} />;
 }
 
-class UniqueUser extends Component {
+class UniqueUserDetail extends Component {
   constructor(props) {
     super(props);
 
@@ -55,4 +55,4 @@ class UniqueUser extends Component {
   }
 }
 
-export default withParams(UniqueUser);
+export default withParams(UniqueUserDetail);

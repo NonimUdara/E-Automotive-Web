@@ -4,9 +4,9 @@ import Navbar from "./components/Navbar";
 import AdminLogin from "./components/AdminLogin";
 import EditPost from './components/EditPost';
 import MemberDetails from './components/MemberDetails';
-import UniqueDetail from './components/UniqueDetail';
 import AdminDashboard from './components/AdminDashboard';
 import Footer from './components/Footer';
+import UniqueUserDetail from './components/UniqueUserDetail';
 
 export default class App extends Component {
   render() {
@@ -19,7 +19,7 @@ export default class App extends Component {
             <Route path="/admindashboard" element={<AdminDashboard/>}/>
             <Route path="/memberdetails" element={<MemberDetails />} />
             <Route path="/edit/:id" element={<EditPost />} />
-            <Route path="/post/:id" element={<UniqueDetail />} />
+            <Route path="/post/:id" element={<UniqueUserDetail />} />
           </Routes>
           <Footer/>         
         </div>
