@@ -38,8 +38,6 @@ class EditUser extends Component {
       phone: phone
     }
 
-
-
     axios.put("/post/update/" + id, data).then((res) => {
       console.log(data)
       if (res.data.success) {
@@ -53,7 +51,6 @@ class EditUser extends Component {
         )
       }
     })
-
   }
 
   componentDidMount() {
