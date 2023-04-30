@@ -107,7 +107,7 @@ export default class UserDetails extends Component {
                 <td>{users.email}</td>
                 <td>{users.phone}</td>
                 <td>
-                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image.image} />
+                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image} />
                 </td>
                 <td>
                   <a className="btn btn-primary" href={`/edit/${users._id}`}>
