@@ -38,10 +38,10 @@ class EditUser extends Component {
       phone: phone
     }
 
-    axios.put("/post/update/" + id, data).then((res) => {
+    axios.put("/user/update/" + id, data).then((res) => {
       console.log(data)
       if (res.data.success) {
-        alert("Post Updated Successfully");
+        alert("User Updated Successfully");
         this.setState(
           {
             name: "",
@@ -57,7 +57,7 @@ class EditUser extends Component {
 
     const { id } = this.props.params;
 
-    axios.get("/post/" + id).then((res) => {
+    axios.get("/user/" + id).then((res) => {
       if (res.data.success) {
         this.setState({
           name: res.data.post.name,

@@ -6,7 +6,7 @@ export default class UserDetails extends Component {
     super(props);
 
     this.state = {
-      posts: []
+      users: []
     };
 
   }
@@ -16,13 +16,13 @@ export default class UserDetails extends Component {
   }
 
   retrievePosts() {
-    axios.get("/posts").then(res => {
+    axios.get("/users").then(res => {
       if (res.data.success) {
         this.setState({
-          posts: res.data.existingPosts
+          users: res.data.existingPosts
         });
 
-        console.log(this.state.posts);
+        console.log(this.state.users);
       }
     });
   }
@@ -34,15 +34,15 @@ export default class UserDetails extends Component {
     })
   }
 
-  filterData(posts, searchKey) {
+  filterData(users, searchKey) {
 
-    const result = posts.filter((post) =>
+    const result = users.filter((post) =>
       post.name.toLowerCase().includes(searchKey) ||
       post.email.toLowerCase().includes(searchKey) ||
       post.phone.toLowerCase().includes(searchKey)
     )
 
-    this.setState({ posts: result })
+    this.setState({ users: result })
 
   }
 
@@ -50,7 +50,7 @@ export default class UserDetails extends Component {
 
     const searchKey = e.currentTarget.value;
 
-    axios.get("/posts").then(res => {
+    axios.get("/users").then(res => {
       if (res.data.success) {
 
         this.filterData(res.data.existingPosts, searchKey)
@@ -92,26 +92,30 @@ export default class UserDetails extends Component {
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
+              <th scope="col">Image</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.posts.map((posts, index) => (
+            {this.state.users.map((users, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>
-                  {<a href={`/post/${posts._id}`} style={{ textDecoration: 'none' }}>
-                    {posts.name}
+                  {<a href={`/post/${users._id}`} style={{ textDecoration: 'none' }}>
+                    {users.name}
                   </a>}
                 </td>
-                <td>{posts.email}</td>
-                <td>{posts.phone}</td>
+                <td>{users.email}</td>
+                <td>{users.phone}</td>
                 <td>
-                  <a className="btn btn-primary" href={`/edit/${posts._id}`}>
+                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image.image} />
+                </td>
+                <td>
+                  <a className="btn btn-primary" href={`/edit/${users._id}`}>
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
                   &nbsp;
-                  <button className="btn btn-danger" onClick={() => this.onDelete(posts._id)}>
+                  <button className="btn btn-danger" onClick={() => this.onDelete(users._id)}>
                     <i className="fa fa-trash"></i>&nbsp;Delete
                   </button>
                 </td>
