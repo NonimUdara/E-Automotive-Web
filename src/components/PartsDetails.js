@@ -16,7 +16,7 @@ export default class UserDetails extends Component {
   }
 
   retrievePosts() {
-    axios.get("/users").then(res => {
+    axios.get("/parts").then(res => {
       if (res.data.success) {
         this.setState({
           users: res.data.existingPosts
@@ -28,7 +28,7 @@ export default class UserDetails extends Component {
   }
 
   onDelete = (id) => {
-    axios.delete(`/user/delete/${id}`).then((res) => {
+    axios.delete(`/part/delete/${id}`).then((res) => {
       alert("Delete Successfully");
       this.retrievePosts();
     })
@@ -50,7 +50,7 @@ export default class UserDetails extends Component {
 
     const searchKey = e.currentTarget.value;
 
-    axios.get("/users").then(res => {
+    axios.get("/parts").then(res => {
       if (res.data.success) {
 
         this.filterData(res.data.existingPosts, searchKey)
@@ -68,7 +68,7 @@ export default class UserDetails extends Component {
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
             <h4>
-              User Details
+              parts Details
             </h4>
           </center>
         </div>
@@ -90,9 +90,10 @@ export default class UserDetails extends Component {
             <tr>
               <th scope="col"> </th>
               <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Image</th>
+              <th scope="col">Model</th>
+              <th scope="col">Price</th>
+              <th scope="col">Condition</th>
+              <th scope="col">type</th>
             </tr>
           </thead>
           <tbody>
@@ -100,17 +101,17 @@ export default class UserDetails extends Component {
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>
-                  {<a href={`/user/${users._id}`} style={{ textDecoration: 'none' }}>
                     {users.name}
-                  </a>}
                 </td>
-                <td>{users.email}</td>
-                <td>{users.phone}</td>
+                <td>{users.model}</td>
+                <td><input value={users.price}></input></td>
+                <td>{users.condition}</td>
+                <td>{users.type}</td>
                 <td>
-                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image} />
+                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image.image} />
                 </td>
                 <td>
-                  <a className="btn btn-primary" href={`/user/edit/${users._id}`}>
+                  <a className="btn btn-primary" href={`/part/edit/${users._id}`}>
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
