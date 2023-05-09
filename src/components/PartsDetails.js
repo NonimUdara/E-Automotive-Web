@@ -6,7 +6,7 @@ export default class UserDetails extends Component {
     super(props);
 
     this.state = {
-      users: []
+      parts: []
     };
 
   }
@@ -19,10 +19,10 @@ export default class UserDetails extends Component {
     axios.get("/parts").then(res => {
       if (res.data.success) {
         this.setState({
-          users: res.data.existingPosts
+          parts: res.data.existingPosts
         });
 
-        console.log(this.state.users);
+        console.log(this.state.parts);
       }
     });
   }
@@ -34,15 +34,17 @@ export default class UserDetails extends Component {
     })
   }
 
-  filterData(users, searchKey) {
+  filterData(parts, searchKey) {
 
-    const result = users.filter((post) =>
+    const result = parts.filter((post) =>
       post.name.toLowerCase().includes(searchKey) ||
-      post.email.toLowerCase().includes(searchKey) ||
-      post.phone.toLowerCase().includes(searchKey)
+      post.model.toLowerCase().includes(searchKey) ||
+      post.price.toLowerCase().includes(searchKey) ||
+      post.condition.toLowerCase().includes(searchKey) ||
+      post.type.toLowerCase().includes(searchKey)
     )
 
-    this.setState({ users: result })
+    this.setState({ parts: result })
 
   }
 
@@ -93,30 +95,31 @@ export default class UserDetails extends Component {
               <th scope="col">Model</th>
               <th scope="col">Price</th>
               <th scope="col">Condition</th>
-              <th scope="col">type</th>
+              <th scope="col">Type</th>
+              <th scope="col">Part image</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.users.map((users, index) => (
+            {this.state.parts.map((parts, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>
-                    {users.name}
+                    {parts.name}
                 </td>
-                <td>{users.model}</td>
-                <td><input value={users.price}></input></td>
-                <td>{users.condition}</td>
-                <td>{users.type}</td>
+                <td>{parts.model}</td>
+                <td>{parts.price}</td>
+                <td>{parts.condition}</td>
+                <td>{parts.type}</td>
                 <td>
-                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image.image} />
+                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + parts.image.image} />
                 </td>
                 <td>
-                  <a className="btn btn-primary" href={`/part/edit/${users._id}`}>
+                  <a className="btn btn-primary" href={`/part/edit/${parts._id}`}>
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
                   &nbsp;
-                  <button className="btn btn-danger" onClick={() => this.onDelete(users._id)}>
+                  <button className="btn btn-danger" onClick={() => this.onDelete(parts._id)}>
                     <i className="fa fa-trash"></i>&nbsp;Delete
                   </button>
                 </td>
