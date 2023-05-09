@@ -45,7 +45,7 @@ class EditUser extends Component {
         axios.put("/part/update/" + id, data).then((res) => {
             console.log(data)
             if (res.data.success) {
-                alert("User Updated Successfully");
+                alert("Part Updated Successfully");
                 this.setState(
                     {
                         name: "",

@@ -29,7 +29,7 @@ export default class UserDetails extends Component {
 
   onDelete = (id) => {
     axios.delete(`/user/delete/${id}`).then((res) => {
-      alert("Delete Successfully");
+      alert("User Delete Successfully");
       this.retrievePosts();
     })
   }
