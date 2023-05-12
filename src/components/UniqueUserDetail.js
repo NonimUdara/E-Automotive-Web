@@ -37,24 +37,28 @@ class UniqueUserDetail extends Component {
 
       <div style={{ marginTop: '20px' }}>
 
-        <center style={{ marginBottom: '30px', marginTop: '30px' }}><h4>Unique User Detail</h4></center>
+        <div className="container">
+          <center style={{ marginBottom: '30px', marginTop: '30px' }}><h4>Unique User Detail</h4></center>
 
-        <h4>
-          <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + image} />
-        </h4>
+          <h4>
+            <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + image} />
+          </h4>
 
-        <hr />
+          <hr />
 
-        <dl className="row" style={{ marginBottom: '100px' }}>
-          <dt className="col-sm-3">Name</dt>
-          <dd className="col-sm-9">{name}</dd>
+          <dl className="row" style={{ marginBottom: '100px' }}>
+            <dt className="col-sm-3">Name</dt>
+            <dd className="col-sm-9">{name}</dd>
 
-          <dt className="col-sm-3">Email</dt>
-          <dd className="col-sm-9">{email}</dd>
+            <dt className="col-sm-3">Email</dt>
+            <dd className="col-sm-9">{email}</dd>
 
-          <dt className="col-sm-3">Phone Number</dt>
-          <dd className="col-sm-9">{phone}</dd>
-        </dl>
+            <dt className="col-sm-3">Phone Number</dt>
+            <dd className="col-sm-9">{phone}</dd>
+          </dl>
+        </div>
+
+
 
       </div>
     );

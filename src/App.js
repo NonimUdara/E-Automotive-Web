@@ -10,12 +10,13 @@ import EditUser from './components/EditUser';
 import PartsDetails from './components/PartsDetails';
 import EditPart from './components/EditPart';
 import GaragesDetails from './components/GarageDetails';
+import UniqueGarageDetail from './components/UniqueGarageDetail';
+import EditGarage from './components/EditGarage';
 
 export default class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
           <Navbar/>   
           <Routes>
             <Route path="/" element={<AdminLogin />} />
@@ -25,10 +26,11 @@ export default class App extends Component {
             <Route path="/garagesdetails" element={<GaragesDetails />} />
             <Route path="/user/edit/:id" element={<EditUser />} />
             <Route path="/user/:id" element={<UniqueUserDetail />} />
+            <Route path="/garage/:id" element={<UniqueGarageDetail />} />
             <Route path="/part/edit/:id" element={<EditPart />} />
+            <Route path="/garage/edit/:id" element={<EditGarage />} />
           </Routes>
           <Footer/>         
-        </div>
       </BrowserRouter>
     )
   }

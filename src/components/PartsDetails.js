@@ -28,11 +28,15 @@ export default class UserDetails extends Component {
   }
 
   onDelete = (id) => {
-    axios.delete(`/part/delete/${id}`).then((res) => {
-      alert("Part Deleted Successfully");
-      this.retrievePosts();
-    })
-  }
+    if (window.confirm("Are you sure you want to delete this Part?")) {
+      axios.delete(`/part/delete/${id}`).then((res) => {
+        alert("Part Deleted Successfully");
+        this.retrievePosts();
+      });
+    } else {
+      console.log("Part delete cancelled.");
+    }
+  };
 
   filterData(parts, searchKey) {
 
@@ -76,7 +80,7 @@ export default class UserDetails extends Component {
         </div>
 
         <div className="row">
-          <div className="col-lg-3 mt-2 mb-2">
+          <div className="col-lg-12 mt-12 mb-12">
             <input
               className="form-control"
               type="search"
@@ -87,7 +91,7 @@ export default class UserDetails extends Component {
           </div>
         </div>
 
-        <table class="table" style={{ marginBottom: "60px" }}>
+        <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
           <thead>
             <tr>
               <th scope="col"> </th>

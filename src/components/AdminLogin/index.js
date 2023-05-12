@@ -34,8 +34,8 @@ const Login = () => {
 
 	return (
 		<div className="container">
-			<div class="row">
-				<img src={logo} style={{ height: '750px', width: '1350px' }} alt='background'>
+			<div className="row">
+				<img src={logo} style={{ height: '750px', width: '1450px' }} alt='background'>
 				</img>
 			</div>
 			<div class="row">
