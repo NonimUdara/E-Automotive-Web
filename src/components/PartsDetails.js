@@ -108,14 +108,17 @@ export default class UserDetails extends Component {
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 <td>
-                    {parts.name}
+                  {parts.name}
                 </td>
                 <td>{parts.model}</td>
                 <td>{parts.price}</td>
                 <td>{parts.condition}</td>
                 <td>{parts.type}</td>
                 <td>
-                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + parts.image.image} />
+                  <img alt="" className="activator" style={{ width: 100, height: 100 }} src={`data:image/jpg;base64,${parts.image.image}`} />
+                  <div style={{ marginTop: '10px' }}>
+                    <a href={`data:image/jpg;base64,${parts.image.image}`} download={`part_${parts._id}.jpg`} className="btn btn-outline-primary">Download</a>
+                  </div>
                 </td>
                 <td>
                   <a className="btn btn-primary" href={`/part/edit/${parts._id}`}>
