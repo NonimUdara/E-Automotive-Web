@@ -83,7 +83,7 @@ class EditUser extends Component {
             <div>
 
                 <div className="col-md-8 mt-4 mx-auto">
-                    <center><h3 style={{ marginBottom: '30px' }}>Update User</h3></center>
+                    <center><h3 style={{ marginBottom: '30px' }}>Update Part</h3></center>
                     <form className="needs-validation" noValidate style={{ border: '1px solid black', borderRadius: '5px', padding: '20px' }}>
 
                         <div className="form-group" style={{ marginBottom: '15px' }}>
@@ -133,7 +133,7 @@ class EditUser extends Component {
                                 name="type"
                                 //value={this.state.type}
                                 onChange={this.handleInputChange}>
-                                <option value="">{this.state.type}</option>
+                                <option>{this.state.type}</option>
                                 <option value="CAR">Car</option>
                                 <option value="MOTORCYCLE">Motorcycle</option>
                                 <option value="VAN">Van</option>

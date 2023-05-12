@@ -23,7 +23,7 @@ export default class AdminDashboard extends Component {
             <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Garage Locations</h3>
             <div className="col-12" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>Manage Location Send By Users</p>
-              <a className="btn btn-outline-success w-25" href=" " role="button">Manage</a>
+              <a className="btn btn-outline-success w-25" href="garagesdetails" role="button">Manage</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
 

@@ -70,7 +70,7 @@ export default class UserDetails extends Component {
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
             <h4>
-              parts Details
+              Parts Details
             </h4>
           </center>
         </div>
