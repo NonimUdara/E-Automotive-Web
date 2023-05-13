@@ -33,10 +33,22 @@ const Login = () => {
 	};
 
 	return (
-		<div className="container">
-			<div className="row">
+		<div>
+			{/* <div className="row">
 				<img src={logo} style={{ height: '750px', width: '1450px' }} alt='background'>
 				</img>
+			</div> */}
+			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img class="d-block w-100" src={logo} alt="First slide" height={"100%"} width={"100%"} />
+						<div class="carousel-caption d-none d-md-block">
+							<button type="button" class="btn btn-outline-secondary btn-lg">Welcome Admin</button>
+							<h5 style={{ color: '#707070', fontFamily: 'italic', marginTop: 25 }}>As an admin You can manage every function on E-Automotive mobile app. </h5>
+							<h5 style={{ color: '#707070', fontFamily: 'italic', marginBottom: 80 }}>Prior to that please login. </h5>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="row">
 				<div className={styles.login_container} style={{ marginBottom: '-30px' }}>

@@ -8,7 +8,7 @@ export default class UserDetails extends Component {
     this.state = {
       users: []
     };
-
+    
   }
 
   componentDidMount() {
@@ -62,8 +62,6 @@ export default class UserDetails extends Component {
       }
     });
   }
-
-
 
   render() {
     return (
