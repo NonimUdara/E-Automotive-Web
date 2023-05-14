@@ -8,7 +8,7 @@ export default class AdminDashboard extends Component {
         <div className="container">
           <div className="row">
             
-            <h1 style={{ textAlign: 'center', marginTop: '30px' }}> Welcome Admin</h1>
+            <h3 style={{ textAlign: 'center', marginTop: '30px', fontWeight:'bold', fontSize:35 }}> Welcome Admin</h3>
             <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
             <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>User Management</p>
@@ -33,7 +33,7 @@ export default class AdminDashboard extends Component {
             </div>
             <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
               <p>View Contact Us Messages</p>
-              <a className="btn btn-outline-primary w-25" href=" " role="button">Messages</a>
+              <a className="btn btn-outline-primary w-25" href="contactusdetails" role="button">Messages</a>
             </div>
             <hr style={{ marginTop: '30px', marginBottom: '30px', }}></hr>
 
