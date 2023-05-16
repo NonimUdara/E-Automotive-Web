@@ -69,7 +69,7 @@ export default class UserDetails extends Component {
 
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
-            <h4>
+            <h4 style={{fontWeight:'bold'}}>
               User Details
             </h4>
           </center>
@@ -94,7 +94,9 @@ export default class UserDetails extends Component {
               <th scope="col">Name</th>
               <th scope="col">Email</th>
               <th scope="col">Phone</th>
-              <th scope="col">Image</th>
+              <th scope="col">Address</th>
+              <th scope="col">Postal Code</th>
+              <th scope="col">Profile picture</th>
             </tr>
           </thead>
           <tbody>
@@ -108,6 +110,8 @@ export default class UserDetails extends Component {
                 </td>
                 <td>{users.email}</td>
                 <td>{users.phone}</td>
+                <td>{users.address}</td>
+                <td>{users.postalcode}</td>
                 <td>
                   <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image} />
                 </td>
