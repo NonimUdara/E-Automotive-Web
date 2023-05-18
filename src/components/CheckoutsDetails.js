@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class ContactUsDetails extends Component {
+export default class CheckoutsDetails extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      contact: []
+      checkouts: []
     };
 
   }
@@ -16,13 +16,13 @@ export default class ContactUsDetails extends Component {
   }
 
   retrievePosts() {
-    axios.get("/contactus").then(res => {
+    axios.get("/payments").then(res => {
       if (res.data.success) {
         this.setState({
-          contact: res.data.existingPosts
+            checkouts: res.data.existingPosts
         });
 
-        console.log(this.state.contact);
+        console.log(this.state.checkouts);
       }
     });
   }
@@ -38,15 +38,18 @@ export default class ContactUsDetails extends Component {
     }
   };
 
-  filterData(contact, searchKey) {
+  filterData(checkouts, searchKey) {
 
-    const result = contact.filter((post) =>
-      post.type.toLowerCase().includes(searchKey) ||
-      post.message.toLowerCase().includes(searchKey) ||
-      post.email.toLowerCase().includes(searchKey)
+    const result = checkouts.filter((post) =>
+      post.name.toLowerCase().includes(searchKey) ||
+      post.address.toLowerCase().includes(searchKey) ||
+      post.postal.toLowerCase().includes(searchKey) ||
+      post.email.toLowerCase().includes(searchKey) ||
+      post.phone.toLowerCase().includes(searchKey) ||
+      post.amount.toLowerCase().includes(searchKey)
     )
 
-    this.setState({ contact: result })
+    this.setState({ checkouts: result })
 
   }
 
@@ -54,7 +57,7 @@ export default class ContactUsDetails extends Component {
 
     const searchKey = e.currentTarget.value;
 
-    axios.get("/contactus").then(res => {
+    axios.get("/payments").then(res => {
       if (res.data.success) {
 
         this.filterData(res.data.existingPosts, searchKey)
@@ -71,8 +74,8 @@ export default class ContactUsDetails extends Component {
 
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
-            <h4>
-              Contactus Messages
+            <h4 style={{fontWeight:'bold'}}>
+              Checkouts
             </h4>
           </center>
         </div>
@@ -93,18 +96,24 @@ export default class ContactUsDetails extends Component {
           <thead>
             <tr>
               <th scope="col"> </th>
-              <th scope="col">Problem</th>
-              <th scope="col">Message</th>
+              <th scope="col">Name</th>
+              <th scope="col">Address</th>
+              <th scope="col">Postal Code</th>
               <th scope="col">Email</th>
+              <th scope="col">Phone Number</th>
+              <th scope="col">Amount</th>
             </tr>
           </thead>
           <tbody>
-            {this.state.contact.map((contact, index) => (
+            {this.state.checkouts.map((checkouts, index) => (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>{contact.type}</td>
-                <td>{contact.message}</td>
-                <td>{contact.email}</td>
+                <td>{checkouts.name}</td>
+                <td>{checkouts.address}</td>
+                <td>{checkouts.postal}</td>
+                <td>{checkouts.email}</td>
+                <td>{checkouts.phone}</td>
+                <td>{checkouts.amount}</td>
               </tr>
             ))}
           </tbody>

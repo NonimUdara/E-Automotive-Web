@@ -26,7 +26,7 @@ export default class AdminDashboard extends Component {
               <hr style={{ width: '70%', margin: 'auto' }}></hr>
               <div className="col-6" style={{ alignItems: 'center', textAlign: 'center', marginTop: 30, marginBottom: 30 }}>
                 <p>View Checkouts</p>
-                <a className="btn btn-outline-primary w-25" href="/memberdetails" role="button">Checkouts</a>
+                <a className="btn btn-outline-primary w-25" href="/checkoutsdetails" role="button">Checkouts</a>
               </div>
               <div className="col-6" style={{ alignItems: 'center', textAlign: 'center', marginTop: 30, marginBottom: 30 }}>
                 <p>View Contact Us Messages</p>

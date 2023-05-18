@@ -13,7 +13,7 @@ function downloadImage(imageData) {
     link.click();
 }
 
-class UniqueUserDetail extends Component {
+class UniqueGarageDetail extends Component {
     constructor(props) {
         super(props);
 
@@ -100,4 +100,4 @@ class UniqueUserDetail extends Component {
     }
 }
 
-export default withParams(UniqueUserDetail);
+export default withParams(UniqueGarageDetail);

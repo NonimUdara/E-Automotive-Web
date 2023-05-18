@@ -13,6 +13,7 @@ import GaragesDetails from './components/GarageDetails';
 import UniqueGarageDetail from './components/UniqueGarageDetail';
 import EditGarage from './components/EditGarage';
 import ContactUsDetails from './components/ContactUsDetails';
+import CheckoutsDetails from './components/CheckoutsDetails';
 
 export default class App extends Component {
   render() {
@@ -26,6 +27,7 @@ export default class App extends Component {
             <Route path="/partsdetails" element={<PartsDetails />} />
             <Route path="/garagesdetails" element={<GaragesDetails />} />
             <Route path="/contactusdetails" element={<ContactUsDetails />} />
+            <Route path="/checkoutsdetails" element={<CheckoutsDetails />} />
             <Route path="/user/edit/:id" element={<EditUser />} />
             <Route path="/user/:id" element={<UniqueUserDetail />} />
             <Route path="/garage/:id" element={<UniqueGarageDetail />} />
