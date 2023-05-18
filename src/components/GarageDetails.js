@@ -19,7 +19,7 @@ export default class UserDetails extends Component {
     axios.get("/garages").then(res => {
       if (res.data.success) {
         this.setState({
-          garages: res.data.existingPosts
+          garages: res.data.existingGarages
         });
 
         console.log(this.state.garages);
@@ -95,7 +95,7 @@ export default class UserDetails extends Component {
     axios.get("/garages").then(res => {
       if (res.data.success) {
 
-        this.filterData(res.data.existingPosts, searchKey)
+        this.filterData(res.data.existingGarages, searchKey)
 
       }
     });

@@ -39,6 +39,8 @@ class UniqueUserDetail extends Component {
 
         const { name, town, address, number, latitude, longitude, access, email } = this.state.post;
         const { image1 } = this.state.post;
+        const { image2 } = this.state.post;
+
 
         return (
 
@@ -59,8 +61,8 @@ class UniqueUserDetail extends Component {
                     <div style={{ marginTop: 20 }}>
                         <h4 >
                             <dt className="col-sm-3">Garage Report</dt>
-                            <img alt="" className="activator" style={{ width: 200, height: 200 }} src={`data:image/jpg;base64,${image1}`} />
-                            <button style={{ marginLeft: 20 }} onClick={() => downloadImage(image1)} className="btn btn-outline-primary">Download Now</button>
+                            <img alt="" className="activator" style={{ width: 200, height: 200 }} src={`data:image/jpg;base64,${image2}`} />
+                            <button style={{ marginLeft: 20 }} onClick={() => downloadImage(image2)} className="btn btn-outline-primary">Download Now</button>
                         </h4>
                     </div>
 

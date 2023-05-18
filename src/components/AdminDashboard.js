@@ -5,43 +5,45 @@ export default class AdminDashboard extends Component {
     return (
       <div>
 
-        <div className="container">
-          <div className="row">
-            
-            <h3 style={{ textAlign: 'center', marginTop: '30px', fontWeight:'bold', fontSize:35 }}> Welcome Admin</h3>
-            <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
-            <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <p>User Management</p>
-              <a className="btn btn-outline-primary w-25" href="/memberdetails" role="button">Users</a>
-            </div>
-            <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <p>Parts Management</p>
-              <a className="btn btn-outline-primary w-25" href="/partsdetails" role="button">Parts</a>
-            </div>
-            <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
+        <div className="container" style={{ marginBottom: 50, marginTop: 50 }}>
+          <div className="card">
+            <div className="row">
+              <h3 style={{ textAlign: 'center', marginTop: '30px', fontWeight: 'bold', fontSize: 35, marginBottom: '30px' }}> Welcome Admin</h3>
+              <hr style={{ width: '70%', margin: 'auto' }}></hr>
+              <div className="col-6" style={{ alignItems: 'center', textAlign: 'center', marginTop: 30 }}>
+                <p>User Management</p>
+                <a className="btn btn-outline-primary w-25" href="/memberdetails" role="button">Users</a>
+              </div>
+              <div className="col-6" style={{ alignItems: 'center', textAlign: 'center', marginTop: 30, marginBottom: 30 }}>
+                <p>Parts Management</p>
+                <a className="btn btn-outline-primary w-25" href="/partsdetails" role="button">Parts</a>
+              </div>
+              <hr style={{ width: '70%', margin: 'auto' }}></hr>
 
-            <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Garage Locations</h3>
-            <div className="col-12" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <p>Manage Location Send By Users</p>
-              <a className="btn btn-outline-success w-25" href="garagesdetails" role="button">Manage</a>
-            </div>
-            <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
+              <h3 style={{ textAlign: 'center', marginBottom: '20px' }}>Garage Locations</h3>
+              <div className="col-12" style={{ alignItems: 'center', textAlign: 'center' }}>
+                <p>Manage Location Send By Users</p>
+                <a className="btn btn-outline-success w-25" href="garagesdetails" role="button">Manage</a>
+              </div>
+              <hr style={{ marginTop: '30px', marginBottom: '30px' }}></hr>
 
-            <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <p>View Checkouts</p>
-              <a className="btn btn-outline-primary w-25" href="/memberdetails" role="button">Checkouts</a>
-            </div>
-            <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <p>View Contact Us Messages</p>
-              <a className="btn btn-outline-primary w-25" href="contactusdetails" role="button">Messages</a>
-            </div>
-            <hr style={{ marginTop: '30px', marginBottom: '30px', }}></hr>
+              <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
+                <p>View Checkouts</p>
+                <a className="btn btn-outline-primary w-25" href="/memberdetails" role="button">Checkouts</a>
+              </div>
+              <div className="col-6" style={{ alignItems: 'center', textAlign: 'center' }}>
+                <p>View Contact Us Messages</p>
+                <a className="btn btn-outline-primary w-25" href="contactusdetails" role="button">Messages</a>
+              </div>
+              <hr style={{ marginTop: '30px', marginBottom: '30px', }}></hr>
 
-            <div className="col-12" style={{ alignItems: 'center', textAlign: 'center' }}>
-              <a className="btn btn-outline-danger w-25" href="/" role="button">Logout</a>
-            </div>
+              <div className="col-12" style={{ alignItems: 'center', textAlign: 'center' }}>
+                <a className="btn btn-outline-danger w-25" href="/" role="button">Logout</a>
+              </div>
 
+            </div>
           </div>
+
         </div>
 
       </div>
