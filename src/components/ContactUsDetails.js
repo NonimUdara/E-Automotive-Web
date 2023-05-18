@@ -71,7 +71,7 @@ export default class ContactUsDetails extends Component {
 
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
-            <h4>
+            <h4 style={{fontWeight:'bold'}} >
               Contactus Messages
             </h4>
           </center>

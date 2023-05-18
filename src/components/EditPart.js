@@ -83,7 +83,7 @@ class EditPart extends Component {
             <div>
 
                 <div className="col-md-8 mt-4 mx-auto">
-                    <center><h3 style={{ marginBottom: '30px' }}>Update Part</h3></center>
+                    <center><h3 style={{ marginBottom: '30px', fontWeight:'bold' }}>Update Part</h3></center>
                     <form className="needs-validation" noValidate style={{ border: '1px solid black', borderRadius: '5px', padding: '20px' }}>
 
                         <div className="form-group" style={{ marginBottom: '15px' }}>

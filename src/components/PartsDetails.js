@@ -73,7 +73,7 @@ export default class PartsDetails extends Component {
 
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
-            <h4>
+            <h4 style={{fontWeight:'bold'}}>
               Parts Details
             </h4>
           </center>

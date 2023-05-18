@@ -87,11 +87,11 @@ class EditGarage extends Component {
             <div>
 
                 <div className="col-md-8 mt-4 mx-auto">
-                    <center><h3 style={{ marginBottom: '30px' }}>Update Garage</h3></center>
+                    <center><h3 style={{ marginBottom: '30px', fontWeight:'bold' }}>Update Garage</h3></center>
                     <form className="needs-validation" noValidate style={{ border: '1px solid black', borderRadius: '5px', padding: '20px' }}>
 
                         <div className="form-group" style={{ marginBottom: '15px' }}>
-                            <label style={{ marginBottom: '5px' }}>Garage Name</label>
+                            <label style={{ marginBottom: '5px'}}>Garage Name</label>
                             <input type="text"
                                 className="form-control"
                                 name="name"
