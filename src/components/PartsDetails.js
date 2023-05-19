@@ -43,6 +43,7 @@ export default class PartsDetails extends Component {
     const result = parts.filter((post) =>
       post.name.toLowerCase().includes(searchKey) ||
       post.model.toLowerCase().includes(searchKey) ||
+      post.email.toLowerCase().includes(searchKey) ||
       post.price.toLowerCase().includes(searchKey) ||
       post.condition.toLowerCase().includes(searchKey) ||
       post.type.toLowerCase().includes(searchKey)
@@ -94,39 +95,42 @@ export default class PartsDetails extends Component {
         <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
           <thead>
             <tr>
-              <th scope="col"> </th>
-              <th scope="col">Name</th>
-              <th scope="col">Model</th>
-              <th scope="col">Price</th>
-              <th scope="col">Condition</th>
-              <th scope="col">Type</th>
-              <th scope="col">Part image</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"> </th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Name</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Owner Email</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Model</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Price</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Condition</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Type</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Part image</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"></th>
             </tr>
           </thead>
           <tbody>
             {this.state.parts.map((parts, index) => (
-              <tr key={index}>
+              <tr style={{border:"1px solid black", textAlign:'center'}} key={index}>
                 <th scope="row">{index + 1}</th>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   {parts.name}
                 </td>
-                <td>{parts.model}</td>
-                <td>{parts.price}</td>
-                <td>{parts.condition}</td>
-                <td>{parts.type}</td>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.email}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.model}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.price}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.condition}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.type}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   <img alt="" className="activator" style={{ width: 100, height: 100 }} src={`data:image/jpg;base64,${parts.image.image}`} />
                   <div style={{ marginTop: '10px' }}>
                     <a href={`data:image/jpg;base64,${parts.image.image}`} download={`part_${parts._id}.jpg`} className="btn btn-outline-primary">Download</a>
                   </div>
                 </td>
-                <td>
-                  <a className="btn btn-primary" href={`/part/edit/${parts._id}`}>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
+                  <a className="btn btn-primary" style={{margin:10}} href={`/part/edit/${parts._id}`}>
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
                   &nbsp;
-                  <button className="btn btn-danger" onClick={() => this.onDelete(parts._id)}>
+                  <button className="btn btn-danger" style={{margin:10}} onClick={() => this.onDelete(parts._id)}>
                     <i className="fa fa-trash"></i>&nbsp;Delete
                   </button>
                 </td>

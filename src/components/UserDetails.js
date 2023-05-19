@@ -87,41 +87,41 @@ export default class UserDetails extends Component {
           </div>
         </div>
 
-        <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
+        <table class="table" style={{ marginBottom: "60px", marginTop: "20px", border:"1px solid black" }}>
           <thead>
-            <tr>
-              <th scope="col"> </th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone</th>
-              <th scope="col">Address</th>
-              <th scope="col">Postal Code</th>
-              <th scope="col">Profile picture</th>
+            <tr style={{border:"1px solid black"}}>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"> </th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Name</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Email</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Phone</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Address</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Postal Code</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Profile picture</th>
             </tr>
           </thead>
           <tbody>
             {this.state.users.map((users, index) => (
-              <tr key={index}>
+              <tr key={index } style={{border:"1px solid black", textAlign:'center'}}>
                 <th scope="row">{index + 1}</th>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   {<a href={`/user/${users._id}`} style={{ textDecoration: 'none' }}>
                     {users.name}
                   </a>}
                 </td>
-                <td>{users.email}</td>
-                <td>{users.phone}</td>
-                <td>{users.address}</td>
-                <td>{users.postalcode}</td>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{users.email}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{users.phone}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{users.address}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{users.postalcode}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   <img alt="" className="activator" style={{ width: 100, height: 100 }} src={'data:image/jpg;base64,' + users.image} />
                 </td>
                 <td>
-                  <a className="btn btn-primary" href={`/user/edit/${users._id}`}>
+                  <a className="btn btn-primary" style={{margin:10}} href={`/user/edit/${users._id}`}>
                     <i className="fas fa-edit"></i>&nbsp;Edit
                   </a>
                   &nbsp;
                   &nbsp;
-                  <button className="btn btn-danger" onClick={() => this.onDelete(users._id)}>
+                  <button className="btn btn-danger" style={{margin:10}} onClick={() => this.onDelete(users._id)}>
                     <i className="fa fa-trash"></i>&nbsp;Delete
                   </button>
                 </td>

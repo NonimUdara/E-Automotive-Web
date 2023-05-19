@@ -38,7 +38,7 @@ export default class GarageDetails extends Component {
     }
   };
 
-  onTrue = (id,email) => {
+  onTrue = (id, email) => {
     const data = {
       access: "True",
       email: email
@@ -46,7 +46,7 @@ export default class GarageDetails extends Component {
     if (window.confirm("Are you sure you want to update the part?")) {
       axios.put("/garage/updateAT/" + id, data).then((res) => {
         if (res.data.success) {
-          
+
           alert("Part Updated Successfully");
 
         }
@@ -54,7 +54,7 @@ export default class GarageDetails extends Component {
     }
   };
 
-  onFalse = (id,email) => {
+  onFalse = (id, email) => {
     const data = {
       access: "False",
       email: email
@@ -62,7 +62,7 @@ export default class GarageDetails extends Component {
     if (window.confirm("Are you sure you want to update the part?")) {
       axios.put("/garage/updateAF/" + id, data).then((res) => {
         if (res.data.success) {
-          
+
           alert("Part Updated Successfully");
 
         }
@@ -109,7 +109,7 @@ export default class GarageDetails extends Component {
 
         <div className="row" style={{ marginBottom: '30px', marginTop: '30px' }}>
           <center>
-            <h4 style={{fontWeight:'bold'}}>
+            <h4 style={{ fontWeight: 'bold' }}>
               Garage Details
             </h4>
           </center>
@@ -130,63 +130,62 @@ export default class GarageDetails extends Component {
         <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
 
           <thead>
-            <tr>
-              <th scope="col"> </th>
-              <th scope="col">Name</th>
-              <th scope="col">Town</th>
-              <th scope="col">Address</th>
-              <th scope="col">Phone Number</th>
-              <th scope="col">Latitude</th>
-              <th scope="col">Longitude</th>
-              <th scope="col">Access</th>
-              <th scope="col">Owner E-Mail</th>
-              <th scope="col">Garage Photo</th>
+            <tr style={{border:"1px solid black", textAlign:'center'}}>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"> </th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Name</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Town</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Address</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Phone</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Latitude</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Longitude</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Access</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Owner E-Mail</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Garage Photo</th>
             </tr>
           </thead>
           <tbody>
             {this.state.garages.map((garages, index) => (
-              <tr key={index}>
+              <tr key={index} style={{border:"1px solid black", textAlign:'center'}}>
                 <th scope="row">{index + 1}</th>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   {<a href={`/garage/${garages._id}`} style={{ textDecoration: 'none' }}>
                     {garages.name}
                   </a>}
                 </td>
-                <td>{garages.town}</td>
-                <td>{garages.address}</td>
-                <td>{garages.number}</td>
-                <td>{garages.latitude}</td>
-                <td>{garages.longitude}</td>
-                <td>{garages.access}</td>
-                <td>{garages.email}</td>
-                <td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.town}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.address}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.number}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.latitude}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.longitude}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.access}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{garages.email}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>
                   <img alt="profile" className="activator" style={{ width: 150, height: 150 }} src={'data:image/jpg;base64,' + garages.image1} />
                 </td>
-                <td className="text-center">
-                  <div className="text-center">
-                  <a className="btn btn-primary" href={`/garage/edit/${garages._id}`}>
-                    <i className="fas fa-edit"></i>&nbsp;Edit All
-                  </a>
+                <td style={{border:"1px solid black", textAlign:'center'}} className="text-center container">
+                  <div className="text-center row" style={{display:'flex'}}>
+                    <a className="btn btn-primary col-6" style={{flex:1, margin:10}} href={`/garage/edit/${garages._id}`}>
+                      <i className="fas fa-edit"></i>&nbsp;Edit All
+                    </a>
                     &nbsp;
                     &nbsp;
-                    <button className="btn btn-danger" onClick={() => this.onDelete(garages._id)}>
+                    <button className="btn btn-danger col-6" style={{flex:1, margin:10}} onClick={() => this.onDelete(garages._id)}>
                       <i className="fa fa-trash"></i>&nbsp;Delete
                     </button>
                   </div>
                   &nbsp;
                   &nbsp;
-                  <div>
-                  <div className="text-center">
-                    <button className="btn btn-success" onClick={() => this.onTrue(garages._id,garages.email)}>
+                  <div className="text-center row" style={{display:'flex'}}>
+                    <button className="btn btn-success col-6" style={{flex:1, margin:10}} onClick={() => this.onTrue(garages._id, garages.email)}>
                       <i className="fas fa-edit"></i>&nbsp;Give Access
                     </button>
                     &nbsp;
                     &nbsp;
-                    <button className="btn btn-danger" onClick={() => this.onFalse(garages._id,garages.email)}>
+                    <button className="btn btn-danger col-6" style={{flex:1, margin:10}} onClick={() => this.onFalse(garages._id, garages.email)}>
                       <i className="fa fa-trash"></i>&nbsp;Access Denied
                     </button>
                   </div>
-                  </div>
+
                 </td>
               </tr>
             ))}

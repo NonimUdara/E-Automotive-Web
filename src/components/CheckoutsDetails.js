@@ -94,26 +94,26 @@ export default class CheckoutsDetails extends Component {
 
         <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
           <thead>
-            <tr>
-              <th scope="col"> </th>
-              <th scope="col">Name</th>
-              <th scope="col">Address</th>
-              <th scope="col">Postal Code</th>
-              <th scope="col">Email</th>
-              <th scope="col">Phone Number</th>
-              <th scope="col">Amount</th>
+            <tr style={{border:"1px solid black", textAlign:'center'}}>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"> </th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Name</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Address</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Postal Code</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Email</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Phone Number</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Amount</th>
             </tr>
           </thead>
           <tbody>
             {this.state.checkouts.map((checkouts, index) => (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td>{checkouts.name}</td>
-                <td>{checkouts.address}</td>
-                <td>{checkouts.postal}</td>
-                <td>{checkouts.email}</td>
-                <td>{checkouts.phone}</td>
-                <td>{checkouts.amount}</td>
+              <tr key={index} style={{border:"1px solid black", textAlign:'center'}}>
+                <th style={{border:"1px solid black", textAlign:'center'}} scope="row">{index + 1}</th>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.name}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.address}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.postal}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.email}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.phone}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.amount}</td>
               </tr>
             ))}
           </tbody>

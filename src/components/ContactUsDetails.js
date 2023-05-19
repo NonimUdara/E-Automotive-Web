@@ -91,20 +91,20 @@ export default class ContactUsDetails extends Component {
 
         <table class="table" style={{ marginBottom: "60px", marginTop: "20px" }}>
           <thead>
-            <tr>
-              <th scope="col"> </th>
-              <th scope="col">Problem</th>
-              <th scope="col">Message</th>
-              <th scope="col">Email</th>
+            <tr style={{border:"1px solid black", textAlign:'center'}}>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col"> </th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Problem</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Message</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Email</th>
             </tr>
           </thead>
           <tbody>
             {this.state.contact.map((contact, index) => (
-              <tr key={index}>
-                <th scope="row">{index + 1}</th>
-                <td>{contact.type}</td>
-                <td>{contact.message}</td>
-                <td>{contact.email}</td>
+              <tr style={{border:"1px solid black", textAlign:'center'}} key={index}>
+                <th style={{border:"1px solid black", textAlign:'center'}} scope="row">{index + 1}</th>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{contact.type}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{contact.message}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{contact.email}</td>
               </tr>
             ))}
           </tbody>
