@@ -115,7 +115,7 @@ export default class PartsDetails extends Component {
                 </td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{parts.email}</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{parts.model}</td>
-                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.price}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{parts.price}.00</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{parts.condition}</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{parts.type}</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>

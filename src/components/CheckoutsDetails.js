@@ -102,6 +102,7 @@ export default class CheckoutsDetails extends Component {
               <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Email</th>
               <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Phone Number</th>
               <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Amount</th>
+              <th style={{border:"1px solid black", textAlign:'center'}} scope="col">Date & Time</th>
             </tr>
           </thead>
           <tbody>
@@ -113,7 +114,8 @@ export default class CheckoutsDetails extends Component {
                 <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.postal}</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.email}</td>
                 <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.phone}</td>
-                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.amount}</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.amount}.00</td>
+                <td style={{border:"1px solid black", textAlign:'center'}}>{checkouts.createdAt}</td>
               </tr>
             ))}
           </tbody>
